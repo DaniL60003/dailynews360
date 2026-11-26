@@ -58,7 +58,7 @@ jobs:
 
           git add archive editions.json
 
-          git diff --cached --quiet || (git commit -m 'Update news' && git push)
+          git diff --cached --quiet || (git commit -m 'Update news' && git pull --rebase origin main && git push origin main)
 
       - uses: actions/configure-pages@v5
 
